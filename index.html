@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/aduio.css">
+</head>
+<body>
+    <div class="audio_content">
+        <div class="audio_play">
+            <div class="audio_controlArea">
+                    <div id="audio_musicInfo" class="audio_musicInfo">
+                        <div  class="audio_btn" onclick="playMusic()">
+                            <span class="audio_playBtn"></span>
+                        </div>
+                        <img src="./assets/hqdefault.jpg" alt="">
+                    </div>
+                    <div id="audio_controller" class="audio_controller">
+                        <p class="audio_musicTitle">天空之城钢琴曲</p>
+                        <p class="audio_musicAuthor">无</p>
+                        <p class="audio_musicTime"><span id="musicTime_now">0:00</span>/<span id="musicTime_long"></span></p>
+                        <div id="audio_musicBtns" class="audio_musicBtns">
+                            <div  class="audio_musicBtnsPre">上一曲</div>
+                            <div onclick="playMusic()"  class="audio_musicBtnsPlay">开始/暂停</div>
+                            <div  class="audio_musicBtnsNext">下一曲</div>
+                        </div>
+                        <div class="audio_controllCard">
+                            <div id="audio_voiceLine" class="audio_voiceLine" onclick="changeVoice(event)">
+                                <span id="audio_voiceNum" class="audio_voiceNum"></span>
+                            </div>
+                            <div class="audio_musicVoice">
+                                <img src="./assets/sound.png" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div id="timeLine" class="audio_timelineArea">
+                <div id="audio_timelineBar" class="audio_timelineBar"></div>
+                <div id="audio_timeText" class="audio_timeText"></div>
+            </div>
+        </div>
+        <div style="height: 300px"></div>
+        <audio id="audios" src="./assets/2850400793.mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</body>
+<script src="./script/audio.js"></script>
+</html>
